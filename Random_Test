@@ -1,0 +1,18 @@
+import design5.PointCP2;
+import design5.PointCP5;
+
+import java.util.Random;
+
+public class Randon_Test {
+    public static void main(String[] args) {
+        Random r = new Random();
+        PointCP5 p = new PointCP2(r.nextInt(9999), r.nextInt(9999));
+        long start = System.currentTimeMillis();
+        for(int i = 0; i < 1000000; i++) {
+            p.getRho();
+            p.getTheta();
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Time: " + (end - start));
+    }
+}
