@@ -1,0 +1,16 @@
+import design1.PointCP;
+
+
+public class Test {
+    public static void main(String args[]){
+        PointCP p = new PointCP('P',1, 1);
+        long start = System.currentTimeMillis();
+        for(int i = 0; i < 100000000; i++) {
+            p.getRho();
+            p.getTheta();
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Time: " + (end - start));
+    }
+
+}
